@@ -14,7 +14,7 @@ import { logout } from "../actions/userActions";
 function Header({ setSearch }) {
   const dispatch = useDispatch();
 
-  const userLogin = useSelector((state) => state.userLogin);
+  const userLogin = useSelector(state => state.userLogin);
   const { userInfo } = userLogin;
 
   const logoutHandler = () => {
@@ -26,7 +26,7 @@ function Header({ setSearch }) {
   return (
     <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
       <Container>
-        <Navbar.Brand href="/">Note Zipper</Navbar.Brand>
+        <Navbar.Brand href="/">Note Keeper</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -37,7 +37,7 @@ function Header({ setSearch }) {
                   type="text"
                   placeholder="Search"
                   className="mr-sm-2"
-                  onChange={(e) => setSearch(e.target.value)}
+                  onChange={e => setSearch(e.target.value)}
                 />
               </Form>
             )}
